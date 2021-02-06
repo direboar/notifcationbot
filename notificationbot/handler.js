@@ -28,7 +28,7 @@ function notify(){
         client.destroy();
     })
   });
-  client.login("ODA3NDkxMjU2NTE4NTc0MTEx.YB4w1g.W3Elsr-WL5BmqQRHjjJMSFrGmZQ");
+  client.login(process.env.token);
 }
 
 function getMessage(){
