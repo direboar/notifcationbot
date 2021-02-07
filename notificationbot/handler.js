@@ -1,6 +1,6 @@
 'use strict';
 const Discord = require('discord.js');
-const moment = require('moment')
+const moment = require('moment-timezone');
 
 module.exports.notify = event => {
   notify();
@@ -32,13 +32,13 @@ function notify(){
 }
 
 function getMessage(){
-  return `[BOT]${moment().format("MM[月]DD[日]")}の参加募集
+  return `[BOT]${moment().tz("Asia/Tokyo").format("MM[月]DD[日]")}の参加募集
 参加を希望するプレイヤーはリアクションにて参加可能時間を指定のうえ、エントリーしてください。
-:clap: :japanese_goblin: `
+[23時00分][23時30分][23時??分][24時以降]`
 }
 
 async function sendMessage(guild,channel){
   const message = await channel.send(getMessage());
-  await message.react("💩")
-  await message.react("🔰")
+  // await message.react("💩")
+  // await message.react("🔰")
 }
