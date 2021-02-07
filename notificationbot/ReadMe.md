@@ -1,2 +1,5 @@
 lambda+cloudwatch eventを用いて1日1回メッセージを書き出すbot。
 botで自動リプライを行う例を含む。
+
+TODO
+テスト用のBotIDを作成（本番IDを使うと、amongusサーバに書き込んでしまうので）
